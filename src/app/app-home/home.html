@@ -1,0 +1,29 @@
+<div id="content">
+  <div id="savedNotes">
+    <div id="noteContainer">
+      <ng-container *ngFor="let note of notes">
+        <note
+          [data]="note"
+          (close)="deleteNote($event)"
+          (edit)="editNote($event)"
+        ></note>
+      </ng-container>
+    </div>
+  </div>
+  <div id="editNote" [ngClass]="classes.input">
+    <div id="note">
+      <div id="inputs">
+        <input placeholder="Subject" [(ngModel)]="newNote.subject" />
+        <textarea
+          placeholder="Type the content of your note here, then push commit to save your Note."
+          [(ngModel)]="newNote.body"
+        ></textarea>
+        <div id="callToAction">
+          <div id="delete" (click)="commitNote()"><p>Delete</p></div>
+          <div></div>
+          <div id="save" (click)="commitNote()"><p>Commit</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

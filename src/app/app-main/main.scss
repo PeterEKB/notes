@@ -1,0 +1,30 @@
+:host {
+    display: grid;
+    grid-template: 
+    '. . .' 1fr
+    '. m .' min(1040px, 100%)
+    '. . .' 1fr
+    /1fr min(1880px, 100%) 1fr;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    background {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    midground {
+        grid-area: m;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+    }
+
+    ui-ele {
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+    }
+}

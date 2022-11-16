@@ -1,0 +1,41 @@
+#content {
+    position: relative;
+    width: 400px;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid hsl(0, 0%, 20%);
+    border-radius: 1rem;
+    color: black;
+    // text-shadow: 1px 1px 4px black;
+}
+
+#subject {
+    min-height: 3rem;
+    padding: .5rem;
+    border-bottom: 1px solid hsl(0, 0%, 70%);
+    font-size: 24px;
+    font-weight: 900;
+}
+#body {
+    height: 0;
+    font-size: 24px;
+    overflow: hidden;
+    transition: .2s;
+
+}
+#body.expand, #content:hover #body {
+    padding: 1rem;
+    height: 300px;
+    overflow-y: auto;
+}
+#close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    cursor: pointer;
+}
+#edit {
+    padding: .5rem;
+    font-size: 32px;
+    cursor: pointer;
+}

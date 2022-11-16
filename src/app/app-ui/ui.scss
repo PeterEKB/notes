@@ -1,0 +1,42 @@
+:host {
+  display: grid;
+  grid-template:
+    ". . ." 1fr
+    ". m ." min(1040px, 100%)
+    ". . ." 1fr
+    /1fr min(1880px, 100%) 1fr;
+  pointer-events: none;
+
+  *:not(#content) {
+    pointer-events: all;
+  }
+}
+#content {
+  grid-area: m;
+}
+#add {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  background-color: hsl(0, 0%, 50%);
+  padding: 1rem 3rem;
+  border: 2px solid hsl(0, 0%, 60%);
+  border-radius: 10rem;
+  box-shadow: 3px 3px 4px black;
+  font-size: 0;
+  cursor: pointer;
+
+  span {
+    color: hsl(0, 0%, 20%);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #add {
+    right: 3rem;
+    bottom: 3rem;
+    padding: 1rem;
+  }
+}

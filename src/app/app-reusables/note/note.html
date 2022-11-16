@@ -1,0 +1,8 @@
+<div id="content">
+  <div id="subject">{{data.subject}}</div>
+  <div id="body" [ngClass]="classes">{{data.body}}</div>
+  <span id="close" class="material-symbols-outlined" (click)="emitEvent('close')">
+    close
+  </span>
+  <span id="edit" class="material-symbols-outlined" (click)="emitEvent('edit')"> edit_note </span>
+</div>
